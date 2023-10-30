@@ -121,6 +121,7 @@ button {
 .main {
     grid-column: 1 / 4;
     grid-row: 2 / 4;
+
     display: grid;
     margin: 10px;
     grid-template-columns: repeat(4, 1fr);
@@ -131,6 +132,10 @@ button {
 .book {
     background-color: var(--secondary-color);
     border-radius: 8px; 
+    display: grid;
+    grid-template-rows: repeat(3 , 1fr);
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -185,4 +190,23 @@ input:focus {
     width: 50%;
     align-self: center;
     justify-self: center;
+}
+
+.main button {
+    width: max-content;
+    color: var(--button-color);
+    font-size: 2rem;
+}
+.main p{
+    border: 1px solid var(--font-color);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 2rem;
+    justify-self: center;
+    text-transform: capitalize;
+}
+
+.author-name::before {
+    content: "By: ";
+    color: var(--font-color);
 }

@@ -24,16 +24,19 @@ function addBookToLibrary(){
         let text = "";
         if (checkBoxInput.checked == true){
             text = readButton.innerText = "Already read"
+            readButton.style.backgroundColor = "lightgreen"
         }
         else {
             text = readButton.innerText = "Not read yet"
+            readButton.style.backgroundColor = "lightcoral"
         }
         return text
     }
     fillButtonText ()
     // Add classes to elements:
     div.classList.add("book");
-
+    bookName.classList.add("title")
+    authorName.classList.add('author-name')
     // append elements:
     div.appendChild(bookName)
     div.appendChild(authorName)
